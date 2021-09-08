@@ -3,13 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
-  {path:'', component: AdminComponent},
   {
-    path: 'parametros',
-    loadChildren: () =>
-      import('./parametros/parametros-routing.module').then(
-        (m) => m.ParametrosRoutingModule
-      ),
+    path: '',
+    component: AdminComponent,
+    children: [
+      {
+        path: 'parametros',
+        loadChildren: () =>
+          import('./parametros/parametros-routing.module').then(
+            (m) => m.ParametrosRoutingModule
+          ),
+      },
+    ],
   },
 ];
 

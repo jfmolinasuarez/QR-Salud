@@ -3,6 +3,7 @@ import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { ClientComponent } from './client/client.component';
 import { HomeComponent } from './client/home/home.component';
 import { InformacionComponent } from './client/informacion/informacion.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 const routerOptions: ExtraOptions = {
   useHash: false,
@@ -35,6 +36,8 @@ const routes: Routes = [
         (m) => m.AdminRoutingModule
       ),
   },
+
+  { path: '**', component: PageNotFoundComponent },
 
   
   

@@ -34,7 +34,6 @@ const routes: Routes = [
       import('./admin/admin-routing.module').then(
         (m) => m.AdminRoutingModule
       ),
-  
   },
 
   

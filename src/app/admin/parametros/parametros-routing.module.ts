@@ -9,11 +9,11 @@ import { PacientesComponent } from './pacientes/pacientes.component';
 
 const routes: Routes = [
   {path:'pacientes', component: PacientesComponent, data:{ title:'Pacientes' }},
-  {path:'medicos', component: MedicosComponent},
-  {path:'especialidades', component: EspecialidadesMedicasComponent},
-  {path:'centros-medicos', component: CentrosMedicosComponent},
-  {path:'categorias-diagnosticos', component: CategoriasDiagnosticosComponent},
-  {path:'convenios-administrativos', component: ConveniosAdministrativosComponent},
+  {path:'medicos', component: MedicosComponent, data:{ title:'Medicos' }},
+  {path:'especialidades', component: EspecialidadesMedicasComponent, data:{ title:'Especialidades' }},
+  {path:'centros-medicos', component: CentrosMedicosComponent, data:{ title:'Centros Medicos' }},
+  {path:'categorias-diagnosticos', component: CategoriasDiagnosticosComponent, data:{ title:'Categorias Diagnosticos' }},
+  {path:'convenios-administrativos', component: ConveniosAdministrativosComponent, data:{ title:'Convenios Administrativos' }},
 ];
 
 @NgModule({

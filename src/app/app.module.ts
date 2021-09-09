@@ -35,11 +35,7 @@ import { MatListModule } from '@angular/material/list';
     ClientModule,
     AdminModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+   
   ],
   exports: [SharedModule],
   providers: [],

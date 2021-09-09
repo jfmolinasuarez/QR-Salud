@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../material.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     RouterModule,
     ReactiveFormsModule
   ]

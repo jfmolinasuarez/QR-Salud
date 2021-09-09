@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
+import { LoginComponent } from './client/auth/login/login.component';
 import { ClientComponent } from './client/client.component';
 import { HomeComponent } from './client/home/home.component';
 import { InformacionComponent } from './client/informacion/informacion.component';
@@ -15,20 +16,11 @@ const routes: Routes = [
     path: '',
     component: ClientComponent,
     children: [
-      { path: '', component: HomeComponent },
-      { path: 'informacion', component: InformacionComponent },
+      { path: '', component: HomeComponent, data:{ title:'AsistenMed' } },
+      { path: 'login', component: LoginComponent, data:{ title:'Información' }},
+      { path: 'informacion', component: InformacionComponent, data:{title:'Inicio De Sesión'}},
     ],
   },
-
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./auth/auth-routing.module').then(
-        (m) => m.AuthRoutingModule
-      ),
-  
-  },
-
   {
     path: 'admin',
     loadChildren: () =>
@@ -39,8 +31,6 @@ const routes: Routes = [
 
   { path: '**', component: PageNotFoundComponent },
 
-  
-  
 ];
 
 

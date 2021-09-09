@@ -24,3 +24,10 @@
     }
     }
 }
+.active {
+  a {
+    color: #4db6ac !important;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(#000000, 0.15);
+  }
+}

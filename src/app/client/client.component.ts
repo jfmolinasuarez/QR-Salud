@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientComponent implements OnInit {
 
+  menuItems =[
+    { path: '/', title: 'Inicio'},
+    { path: '/informacion', title: 'Información' },
+    { path: '/login', title: 'Ingresar' },
+  ] 
+
   constructor() { }
 
   ngOnInit(): void {

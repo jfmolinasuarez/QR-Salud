@@ -1,40 +1,64 @@
-
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav shadow-sm bg-primary" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <img src="../../assets/images/angular2-logo-white.png" class="img-fluid w-50"/>
-          </div>
+  <mat-sidenav
+    #drawer
+    class="sidenav shadow-sm bg-primary"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <img
+            src="../../assets/images/angular2-logo-white.png"
+            class="img-fluid w-50"
+          />
         </div>
       </div>
+    </div>
     <mat-divider></mat-divider>
     <mat-nav-list>
       <app-sidebar></app-sidebar>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content >
-    <mat-toolbar>
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Dashboard</span>
+  <mat-sidenav-content>
+    <mat-toolbar class="d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Dashboard</span>
+      </div>
+      <div>
+        <button mat-icon-button color="primary">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>assignment_ind</mat-icon>
+            <span>Perfil Usuario</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>Cerrar Sesión</span>
+          </button>
+          
+        </mat-menu>
+      </div>
     </mat-toolbar>
     <div class="container pt-3">
-      <app-navbar></app-navbar>
       <router-outlet></router-outlet>
       <app-footer></app-footer>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-
- 

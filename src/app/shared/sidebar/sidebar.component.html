@@ -14,7 +14,7 @@
             *ngFor="let menuItem of menu.menuItems"
             class="nav-item "
           >
-            <a [routerLink]="[menuItem.path]" >
+            <a [routerLink]="[menuItem.path]">
               <span class="material-icons">{{ menuItem.icon }}</span>
               {{ menuItem.title }}
             </a>

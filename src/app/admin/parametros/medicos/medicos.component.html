@@ -1,1 +1,71 @@
-<p>medicos works!</p>
+<div class="card shadow-sm">
+  <div class="card-header bg-primary bg-gradient text-white">MEDICOS</div>
+  <div class="card-body">
+    <div class="row">
+    <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Tipo de Documento</mat-label>
+        <mat-select>
+            <mat-option value="CC">Cédula Ciudadanía</mat-option>
+            <mat-option value="CE">Cédula Extranjería</mat-option>
+            <mat-option value="PS">Pasaporte</mat-option>
+        </mat-select>
+    </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Numero de Identificación</mat-label>
+        <input matInput placeholder="Escribir..." />
+        <mat-icon matSuffix>numbers</mat-icon>
+        <mat-error>error</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Primer Nombre</mat-label>
+        <input matInput placeholder="Escribir..." />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error>error</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Segundo Nombre</mat-label>
+        <input matInput placeholder="Escribir..." />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error>error</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Primer Apellido</mat-label>
+        <input matInput placeholder="Escribir..." />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error>error</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Segundo Apellido</mat-label>
+        <input matInput placeholder="Escribir..." />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error>error</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Sexo</mat-label>
+        <mat-select>
+          <mat-option value="H">Masculino</mat-option>
+          <mat-option value="M">Femenino</mat-option>
+          <mat-option value="I">Inclusión</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Telefono</mat-label>
+        <input matInput placeholder="Escribir..." />
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-error>error</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-lg-3">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput placeholder="Escribir..." />
+        <mat-icon matSuffix>mail_outline</mat-icon>
+        <mat-error>error</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+</div>

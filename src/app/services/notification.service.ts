@@ -21,12 +21,6 @@ export class NotificationService {
     this.Toast.fire(
       {icon: "info",
       title: msj,
-      showClass: {
-        popup: 'animate__animated animate__fadeInDown'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-      }
     }
       )
   }
@@ -37,6 +31,13 @@ export class NotificationService {
     showConfirmButton: false,
     timer: 4000,
     timerProgressBar: true,
+    padding:'5px',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__zoomOut'
+    },
     didOpen: (toast) => {
       toast.addEventListener('mouseenter', Swal.stopTimer)
       toast.addEventListener('mouseleave', Swal.resumeTimer)

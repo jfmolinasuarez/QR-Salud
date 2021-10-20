@@ -1,3 +1,4 @@
+import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client.component.scss']
 })
 export class ClientComponent implements OnInit {
-
-  menuItems =[
-    { path: '/', title: 'Inicio'},
-    { path: '/informacion', title: 'Información' },
-    { path: '/login', title: 'Ingresar' },
-  ] 
-
+  
+ 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
+ 
 }
+

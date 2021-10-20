@@ -3,8 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  URL_BASE: 'https://asistenmed.herokuapp.com/api/v1.0'
+  production: false
 };
 
 /*

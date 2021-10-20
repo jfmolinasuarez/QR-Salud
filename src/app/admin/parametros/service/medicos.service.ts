@@ -10,7 +10,7 @@ export class MedicosService {
   constructor(private http: HttpClient) { }
 
   listarMedicos() {
-    const url = environment.URL_BASE + `/asistencial/medicos`;
+    const url =  `/asistencial/medicos`;
     return this.http
       .get<any>(url)
   }
